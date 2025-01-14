@@ -89,18 +89,19 @@ def rename_header(con_dir, id_seq):
             # Remove the '.con' extension from the name
             name = name.replace('.con', '')
             # Add coordinates of SV to the header line
-            matching_row = id_seq[id_seq['ID'] == name]
-            SV_info = matching_row['sv_coo'].values[0]
+            # matching_row = id_seq[id_seq['ID'] == name]
+            # SV_info = matching_row['sv_coo'].values[0]
             # Open file and read lines
             with open(os.path.join(con_dir, con_file), "r") as f:
                 lines = f.readlines()
-            # Replace first line with SV ID and coordinates info if or only SV ID if header length > 50 
-            header_info = f"{name}{SV_info}"
-            if len(header_info) > 50:
                 new_header = f">{name}\n"
-            else:
-                new_header = f">{header_info}\n"
-            lines[0] = new_header
+            # Replace first line with SV ID and coordinates info if or only SV ID if header length > 50 
+                #header_info = f"{name}{SV_info}"
+                # if len(header_info) > 47:
+                #     new_header = f">{name}\n"
+                # else:
+                #     new_header = f">{header_info}\n"
+                lines[0] = new_header
             # Open file for writing and write updated lines
             with open(os.path.join(con_dir, con_file), "w") as f:
                 f.writelines(lines)
