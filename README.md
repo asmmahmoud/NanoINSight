@@ -3,15 +3,11 @@ NanoINSight is a repeat annotation tool for insertions called by [NanoVar](https
 
 ## Installation:
 
-#### Option 1: 
-
-Installing NanoVar v1.6 from PyPI will automatically install NanoINSight, Please visit [here](https://github.com/benoukraflab/NanoVar) for instructions to install NanoVar.
-
-#### Option 2: Using Pip 
+#### Option 1: Using Pip 
 ```
 pip install nanoinsight
 ```
-#### Option 3: Cloning from GitHub repository
+#### Option 2: Cloning from GitHub repository
 ```
 git clone https://github.com/asmmahmoud/NanoINSight.git
 cd NanoINSight
